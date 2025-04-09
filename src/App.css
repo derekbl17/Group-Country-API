@@ -1,0 +1,110 @@
+.All{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.Asia{
+    background-color:#fe6247;
+    color: #000000;
+}
+
+.Europe{
+    background-color:#90ee90;
+    color: #000000;
+}
+.Africa{
+    background-color: #808080;
+    color: #ffffff;
+}
+.Oceania{
+    background-color: #acd9e6;
+    color: #000000;
+}
+.North-America{
+    background-color: #f7f75b;
+    color: #000000;
+}
+.Antarctica{
+    background-color: #ffffff;
+    color: #000000;
+}
+.South-America{
+    background-color: #f7a60e;
+    color: #000000;
+}
+h3, p{
+    color: #000000;
+}
+p{
+    width: 90%;
+    height: 10px;
+    margin-top: 0px;
+}
+
+
+.continentButton{
+    top:50%;
+    border:solid;
+    border-color: #ffffff;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius:10px; 
+    min-height:30px; 
+    min-width: 120px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.continentFilter{
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+}
+.searchBar{
+    width: 20vw;
+}
+.countryCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.countryCard{
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+img{
+    width: 14vw;
+    height: 8vw;
+    margin-top: 15px;
+}
+.cardContent{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+.moreButton{
+    top:50%;
+    border:none;
+    color: #000000;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius:10px; 
+    min-height:30px; 
+    min-width: 120px;
+}
+.backGround{
+    background-image: url('https://www.look-int.com/wp-content/uploads/2015/06/grunge-world-map-digital-art-hd-wallpaper-2560x1600-4196-1024x640.jpg');
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: 100% auto;
+    min-height: 100vh;
+    width: 100%;
+}
