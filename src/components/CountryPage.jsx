@@ -28,6 +28,7 @@ const goBackHome = () => {
       <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
       <p><strong>Total area:</strong> {country.area}km²</p>
       <p><strong>Languages:</strong> {country.languages && Object.values(country.languages).join(', ')}</p>
+       <p><strong>Borders:</strong> {country.borders && country.borders.length > 0 ? country.borders.join(', ') : "No borders"}</p>
       <button onClick={goBackHome}>Return</button>
       </div>
       
