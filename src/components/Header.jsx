@@ -28,7 +28,7 @@ const Header = ({countries,search,setSearch}) => {
         <button className='continentButton Antarctica' onClick={() => setSelectedContinent("Antarctica")}>Antarctica</button>
         <button className='continentButton South-America' onClick={() => setSelectedContinent("South America")}>South America</button>
       </div>
-      <div className="searchBar" style={{ flex: '0 0 300px' }}>
+      <div className="searchBar" style={{ flex: '0 0 200px' }}>
           <input
             type="text"
             value={search}

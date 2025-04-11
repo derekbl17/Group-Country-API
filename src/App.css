@@ -43,7 +43,6 @@ p{
 }
 
 
-
 .continentButton{
     top:50%;
     border:solid;
@@ -59,14 +58,16 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    flex-wrap: wrap;
 }
 .continentFilter{
-    width: 80vw;
+    width: 75vw;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .searchBar{
-    width: 20vw;
+    width: 10vw;
 }
 .countryCardContainer{
     display: flex;
