@@ -23,6 +23,7 @@ const goBackHome = () => {
       <div className='info'>
         <h2>{country.name.common}</h2>
       <p><strong>Capital:</strong> {country.capital?.[0]}</p>
+      <p><strong>Currency:</strong> {Object.values(country.currencies)[0].name}</p>
       <p><strong>Region:</strong> {country.region}</p>
       <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
       <p><strong>Languages:</strong> {country.languages && Object.values(country.languages).join(', ')}</p>

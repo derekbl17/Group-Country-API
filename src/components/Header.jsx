@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import CountryDisplay from './countryDisplay';
+import CountryDisplay from './CountryDisplay'
 import BackToTop from './BackToTop';
 
 const Header = ({countries,search,setSearch}) => {
