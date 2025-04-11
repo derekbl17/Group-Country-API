@@ -83,6 +83,16 @@ header{
     margin-bottom: 15px;
     border-radius: 5px;
 }
+@media (max-width: 768px) {
+    .countryCard {
+        width: 45vw;
+    }
+}
+@media (max-width: 480px) {
+    .countryCard {
+        width: 90vw;
+    }
+}
 img{
     width: 14vw;
     height: 8vw;
