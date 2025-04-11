@@ -1,12 +1,19 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const CountryPage = () => {
   const { state } = useLocation();
   const { country } = state || {};
 
+  const navigate = useNavigate();
+
+const goBackHome = () => {
+  navigate(-1);
+};
+
   if (!country) {
-    return <div>Country not found.</div>;
+    return <h1 className='error'>Country not found.</h1>;
   }
 
   return (
@@ -19,7 +26,7 @@ const CountryPage = () => {
       <p><strong>Region:</strong> {country.region}</p>
       <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
       <p><strong>Languages:</strong> {country.languages && Object.values(country.languages).join(', ')}</p>
-      <button >Uždaryti</button>
+      <button onClick={goBackHome}>Return</button>
       </div>
       
     </div>

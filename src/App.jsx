@@ -4,6 +4,8 @@ import './App.css'
 import allCountries from './dataFetch/countryApi'
 import Header from './components/Header';
 import CountryPage from './components/CountryPage';
+import Footer from './components/Footer';
+import RouteError from './components/RouteError';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -12,8 +14,6 @@ function App() {
   useEffect(()=>{
     const fetchData=async()=>{
       const countries=await allCountries()
-      console.log(countries[0])
-      console.log(countries[0].flags.png)
       setCountries(countries);
     }
     fetchData()
@@ -21,13 +21,16 @@ function App() {
 
   return (
     <div className='backGround'>
+      <div className='content'>
       <Router>
         <Routes>
           <Route path='/' element={<Header countries={countries}/>}/>
           <Route path="/country/:countryName" element={<CountryPage />} />
+          <Route path="*" element={<RouteError/>}/>
         </Routes>
       </Router>
-      
+      </div>
+      <Footer/>
     </div>
   )
 }

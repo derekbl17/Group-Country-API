@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import CountryDisplay from './countryDisplay';
 import SearchBar from './SearchBar'
+import BackToTop from './BackToTop';
 
 const Header = ({countries}) => {
     const [selectedContinent, setSelectedContinent] = useState("All");
@@ -32,8 +33,10 @@ const Header = ({countries}) => {
       <SearchBar/>
       </div>
       </header>
-
-      <CountryDisplay countries={filterCountries()} /> 
+      
+      <CountryDisplay countries={filterCountries()} />
+      <BackToTop/>
+      
     </div>
   )
 }

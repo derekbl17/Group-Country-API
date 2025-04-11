@@ -4,32 +4,32 @@
 }
 
 .Asia{
-    background-color:#fe6247;
+    background-color:#fe634771;
     color: #000000;
 }
 
 .Europe{
-    background-color:#90ee90;
+    background-color:#90ee9071;
     color: #000000;
 }
 .Africa{
-    background-color: #808080;
+    background-color: #80808071;
     color: #ffffff;
 }
 .Oceania{
-    background-color: #acd9e6;
+    background-color: #acd9e671;
     color: #000000;
 }
 .North-America{
-    background-color: #f7f75b;
+    background-color: #f7f75b71;
     color: #000000;
 }
 .Antarctica{
-    background-color: #ffffff;
+    background-color: #ffffff71;
     color: #000000;
 }
 .South-America{
-    background-color: #f7a60e;
+    background-color: #f7a60e71;
     color: #000000;
 }
 h3, p{
@@ -41,6 +41,7 @@ p{
     height: 10px;
     margin-top: 0px;
 }
+
 
 
 .continentButton{
@@ -78,6 +79,7 @@ header{
     flex-direction: column;
     align-items: center;
     margin-bottom: 15px;
+    border-radius: 5px;
 }
 img{
     width: 14vw;
@@ -108,8 +110,10 @@ img{
     background-size: 100% auto;
     min-height: 100vh;
     width: 100%;
+    display:flex;
+    flex-direction: column;
 }
-body,html{
+body,html, #root{
     margin:0;
     padding:0;
     height:100%;
@@ -131,13 +135,13 @@ h2{
 .info h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   margin-bottom: 20px;
   text-align: center;
 }
 .country-page img {
-  max-width: 500px;
-  height: auto;
+  width:500px;
+    height:300px;
   margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -146,32 +150,66 @@ h2{
   max-width: 600px;
   width: 100%;
   padding: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.37);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 15px;
+  
 }
 .country-page .info p {
   font-size: 1rem;
-  color: #555;
+  color: #000000;
 }
 .country-page .info p + p {
   margin-top: 10px;
 }
 .country-page button {
-  align-self: flex-start;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
+    align-self: flex-start;
+  border:solid;
+    border-color: #ffffff;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius:10px; 
+    min-height:30px; 
+    min-width: 120px;
+    background: rgba(43, 40, 40, 0);
+    color:white;
 }
 .country-page button:hover {
-  background-color: #0056b3;
+  background-color: #000000;
+}
+.back-to-top{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index: 1000;
+}
+.moreButton{
+    border:solid;
+    border-color: #ffffff;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius:10px; 
+    min-height:30px; 
+    min-width: 120px;
+    background: rgba(43, 40, 40, 0);
+    color:white;
+}
+button:hover{
+    box-shadow: 5px 5px 15px rgba(255, 254, 245, 0.692);
+    background-color: #ffffff86;
+    transition-duration: 500ms;
+}
+.content{
+    flex:1;
+}
+.footer{
+    color: white;
+    bottom: 5px;
+    text-align: center;
+}
+.error{
+    color: white;
 }

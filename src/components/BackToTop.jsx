@@ -24,7 +24,7 @@ function BackToTop() {
 
   return (
     <button className="back-to-top" onClick={scrollToTop}>
-      ↑ Į viršų
+      ↑ Back to top
     </button>
   );
 }
