@@ -1,7 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
+import CountryModal from './CountryModal.jsx'
+import { useNavigate } from 'react-router-dom';
 
 const CountryDisplay = ({countries}) => {
+  const navigate=useNavigate()
+  const [selectedCountry, setSelectedCountry] = useState(null);
+
+  const openModal = (country) => {
+    setSelectedCountry(country);
+  };
+
+  const closeModal = () => {
+    setSelectedCountry(null);
+  };
+
+   const handleMoreClick = (country) => {
+    navigate(`/country/${country.name.common}`, { state: { country } });
+  };
+
   return (
+
     <div className='countryCardContainer'>
     {countries.map((country, index) => (
      <div key={index} className={`countryCard ${country.continents[0].replace(/\s+/g, "-")}`}>
@@ -14,11 +32,13 @@ const CountryDisplay = ({countries}) => {
         <p>{`Continent: ${country.continents}`}</p>
         <p>{`Capital: ${country.capital}`}</p>
       </div>
-      <button className='moreButton'>More</button>
+      <button className='moreButton' onClick={()=>handleMoreClick(country)}>More</button>
       
    </div>
     ))}
   </div>
+  
+
   )
 }
 

@@ -109,6 +109,69 @@ img{
     min-height: 100vh;
     width: 100%;
 }
-body{
+body,html{
     margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    box-sizing: border-box;
+}
+#root{
+    height:100%;
+}
+h2{
+    margin:0;
+}
+.country-page {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.country-page img {
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.country-page .info {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.country-page .info p {
+  font-size: 1rem;
+  color: #555;
+}
+.country-page .info p + p {
+  margin-top: 10px;
+}
+.country-page button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+.country-page button:hover {
+  background-color: #0056b3;
 }

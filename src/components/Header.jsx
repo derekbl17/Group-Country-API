@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import CountryDisplay from './countryDisplay';
+import SearchBar from './SearchBar'
 
 const Header = ({countries}) => {
     const [selectedContinent, setSelectedContinent] = useState("All");
@@ -28,7 +29,7 @@ const Header = ({countries}) => {
         <button className='continentButton South-America' onClick={() => setSelectedContinent("South America")}>South America</button>
       </div>
       <div className='searchBar'>
-      {/* search bar componentas */}
+      <SearchBar/>
       </div>
       </header>
 

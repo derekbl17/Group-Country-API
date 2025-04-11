@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import './App.css'
 import allCountries from './dataFetch/countryApi'
 import Header from './components/Header';
+import CountryPage from './components/CountryPage';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -19,7 +21,13 @@ function App() {
 
   return (
     <div className='backGround'>
-      <Header countries={countries}/>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Header countries={countries}/>}/>
+          <Route path="/country/:countryName" element={<CountryPage />} />
+        </Routes>
+      </Router>
+      
     </div>
   )
 }
