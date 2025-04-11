@@ -1,35 +1,35 @@
 .All{
-    background-color: #000000;
+    background-color: #00000090;
     color: #ffffff;
 }
 
 .Asia{
-    background-color:#fe634771;
+    background-color:#fe634790;
     color: #000000;
 }
 
 .Europe{
-    background-color:#90ee9071;
+    background-color:#90ee9090;
     color: #000000;
 }
 .Africa{
-    background-color: #80808071;
+    background-color: #80808090;
     color: #ffffff;
 }
 .Oceania{
-    background-color: #acd9e671;
+    background-color: #acd9e690;
     color: #000000;
 }
 .North-America{
-    background-color: #f7f75b71;
+    background-color: #f7f75b90;
     color: #000000;
 }
 .Antarctica{
-    background-color: #ffffff71;
+    background-color: #ffffff90;
     color: #000000;
 }
 .South-America{
-    background-color: #f7a60e71;
+    background-color: #f7a60e90;
     color: #000000;
 }
 h3, p{
