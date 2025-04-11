@@ -26,6 +26,7 @@ const goBackHome = () => {
       <p><strong>Currency:</strong> {Object.values(country.currencies)[0].name}</p>
       <p><strong>Region:</strong> {country.region}</p>
       <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
+      <p><strong>Total area:</strong> {country.area}km²</p>
       <p><strong>Languages:</strong> {country.languages && Object.values(country.languages).join(', ')}</p>
       <button onClick={goBackHome}>Return</button>
       </div>
