@@ -1,3 +1,4 @@
+
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 
@@ -11,7 +12,7 @@ const CountryDisplay = ({countries}) => {
   return (
 
     <div className='countryCardContainer'>
-    {countries.map((country, index) => (
+    {countries && countries.length > 0 ? (countries.map((country, index) => (
      <div key={index} className={`countryCard ${country.continents[0].replace(/\s+/g, "-")}`}>
      <img
        src={country.flags.png}
@@ -23,9 +24,8 @@ const CountryDisplay = ({countries}) => {
         <p>{`Capital: ${country.capital}`}</p>
       </div>
       <button className='moreButton' onClick={()=>handleMoreClick(country)}>More</button>
-      
    </div>
-    ))}
+    ))) : (<h1 className='error'>NO COUNTRIES FOUND</h1>)}
   </div>
   
 

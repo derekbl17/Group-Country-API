@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
 import CountryDisplay from './countryDisplay';
-import SearchBar from './SearchBar'
 import BackToTop from './BackToTop';
 
-const Header = ({countries}) => {
+const Header = ({countries,search,setSearch}) => {
     const [selectedContinent, setSelectedContinent] = useState("All");
 
     const filterCountries = () => {
@@ -29,9 +28,23 @@ const Header = ({countries}) => {
         <button className='continentButton Antarctica' onClick={() => setSelectedContinent("Antarctica")}>Antarctica</button>
         <button className='continentButton South-America' onClick={() => setSelectedContinent("South America")}>South America</button>
       </div>
-      <div className='searchBar'>
-      <SearchBar/>
-      </div>
+      <div className="searchBar" style={{ flex: '0 0 300px' }}>
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="search..."
+            style={{
+              width: '70%',
+              height: '30px',
+              borderRadius: '10px',
+              border: '1px solid #ccc',
+              margin: '0 0 0 50px',
+              padding: '0 10px',
+              outline: 'none'
+            }}
+          />
+        </div>
       </header>
       
       <CountryDisplay countries={filterCountries()} />

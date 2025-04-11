@@ -9,22 +9,27 @@ import RouteError from './components/RouteError';
 
 function App() {
   const [countries, setCountries] = useState([]);
+  const [search, setSearch] = useState('');
 
 
   useEffect(()=>{
     const fetchData=async()=>{
       const countries=await allCountries()
       setCountries(countries);
-    }
-    fetchData()
-  },[])
+    };
+    fetchData();
+  }, []);
+
+  const filteredCountries = countries.filter(c =>
+    c.name.common.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className='backGround'>
       <div className='content'>
       <Router>
         <Routes>
-          <Route path='/' element={<Header countries={countries}/>}/>
+          <Route path='/' element={<Header countries={filteredCountries} search={search} setSearch={setSearch} />}/>
           <Route path="/country/:countryName" element={<CountryPage />} />
           <Route path="*" element={<RouteError/>}/>
         </Routes>
@@ -32,7 +37,7 @@ function App() {
       </div>
       <Footer/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
